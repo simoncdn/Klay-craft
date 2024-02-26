@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CUSTOM BASE */
+@layer base {
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 14px;
+		color: #373737;
+		background-color: #DFD7CA;
+	}
+	.boxWidth {
+		max-width: 1440px;
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+	}
+}
+
+/* CUSTOM UTILITIES */
+@layer utilities {
+	.flexCol {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flexBetween {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.flexCenter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/* CUSTOM CLASS */
+.paddingX {
+	@apply px-4 md:px-8 xl:px-16;
+}
