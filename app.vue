@@ -2,8 +2,8 @@
 </script>
 
 <template>
-	<div :class="cn('flexCol boxWidth relative')">
-		<!-- <Header /> -->
+	<div :class="cn('relative','boxWidth', 'flexCol')">
+		<Header />
 		<NuxtPage />
 	</div>
 </template>
