@@ -4,13 +4,10 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3008,
 	},
-	modules: [
-		'@nuxtjs/tailwindcss',
-	],
+	modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
 	tailwindcss: {
 		cssPath: '~/assets/css/tailwind.css',
 		configPath: 'tailwind.config.js',
 		exposeConfig: true,
 	},
 })
-

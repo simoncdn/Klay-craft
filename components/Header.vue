@@ -37,5 +37,10 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 				</li>
 			</ul>
 		</nav>
+
+		<div :class="cn('gap-2', 'flex')">
+			<Icon name="lucide:user-2" />
+			<Icon name="lucide:shopping-basket" />
+		</div>
 	</div>
 </template>
