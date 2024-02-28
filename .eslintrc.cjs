@@ -1,4 +1,16 @@
 module.exports = {
-  root: true,
-  extends: ["@nuxt/eslint-config", "prettier"],
-};
+	root: true,
+	env: {
+		browser: true,
+		node: true
+	},
+	parser: 'vue-eslint-parser',
+	parserOptions: {
+		parser: '@typescript-eslint/parser'
+	},
+	extends: ['@nuxt/eslint-config', 'plugin:prettier/recommended', 'prettier'],
+	plugins: [],
+	rules: {
+		'prettier/prettier': 'Warn'
+	}
+}

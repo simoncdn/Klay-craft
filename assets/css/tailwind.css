@@ -11,7 +11,7 @@
 		box-sizing: border-box;
 		font-size: 14px;
 		color: #373737;
-		background-color: #DFD7CA;
+		background-color: #dfd7ca;
 	}
 	.boxWidth {
 		/* max-width: 1440px; */
@@ -44,12 +44,11 @@
 	@apply px-4 md:px-8 xl:px-16;
 }
 
-
 /* FONTS */
 @font-face {
-  font-family: 'valery';
-  src: url('/fonts/kaftan.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'valery';
+	src: url('/fonts/kaftan.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }

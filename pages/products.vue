@@ -1,8 +1,5 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-	<div class="">
-		PRODUCTS
-	</div>
+	<div class="">PRODUCTS</div>
 </template>
