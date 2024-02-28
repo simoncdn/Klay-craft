@@ -11,7 +11,7 @@ export default {
 				mistyGreen: '#919288',
 			},
 			fontFamily: {
-				'heading': ['playfair', 'serif'],
+				'heading': ['valery','serif'],
 				'body': ['roboto', 'sans-serif'],
 			},
 		}
