@@ -4,7 +4,13 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3008
 	},
-	modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-icon', 'shadcn-nuxt'],
+	modules: [
+		'@nuxtjs/eslint-module',
+		'@nuxtjs/tailwindcss',
+		'nuxt-icon',
+		'shadcn-nuxt',
+		'@nuxt/image'
+	],
 	tailwindcss: {
 		cssPath: '~/assets/css/tailwind.css',
 		configPath: 'tailwind.config.js',
