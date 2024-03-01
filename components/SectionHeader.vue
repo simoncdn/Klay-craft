@@ -21,7 +21,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 
 <template>
 	<div :class="cn('z-20', 'top-0', 'flexBetween paddingX py-2', 'text-white')">
-		<span class="font-heading">KC</span>
+		<span class="font-heading text-2xl">KC</span>
 
 		<nav>
 			<ul :class="cn('flex space-x-8')">

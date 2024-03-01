@@ -7,7 +7,7 @@
 			<SectionHeader />
 
 			<video
-				:autoplay="true"
+				autoplay
 				loop
 				muted
 				:class="
@@ -18,7 +18,7 @@
 					)
 				"
 			>
-				<source src="/videos/ceramics-test.mp4" type="video/mp4" />
+			<source src="/videos/ceramics-test.mp4" type="video/mp4" />
 			</video>
 
 			<div :class="cn('paddingX gap-24 mt-24', 'flexCol')">
