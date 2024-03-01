@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger
+} from './ui/sheet'
+
 const routes = [
 	{
 		name: 'home',
@@ -42,6 +51,18 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 		<div :class="cn('gap-2', 'flex')">
 			<Icon name="lucide:user-2" />
 			<Icon name="lucide:shopping-basket" />
+			<Sheet>
+				<SheetTrigger>Open</SheetTrigger>
+				<SheetContent>
+					<SheetHeader>
+						<SheetTitle>Are you sure absolutely sure?</SheetTitle>
+						<SheetDescription>
+							This action cannot be undone. This will permanently delete your account
+							and remove your data from our servers.
+						</SheetDescription>
+					</SheetHeader>
+				</SheetContent>
+			</Sheet>
 		</div>
 	</div>
 </template>

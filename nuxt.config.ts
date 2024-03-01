@@ -4,10 +4,13 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3008
 	},
-	modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-icon'],
+	modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-icon', 'shadcn-nuxt'],
 	tailwindcss: {
 		cssPath: '~/assets/css/tailwind.css',
 		configPath: 'tailwind.config.js',
 		exposeConfig: true
+	},
+	shadcn: {
+		componentDir: './components/ui'
 	}
 })
