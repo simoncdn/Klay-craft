@@ -6,7 +6,7 @@ import { cn } from '@/utils'
 const props = defineProps<DialogDescriptionProps & { class?: HTMLAttributes['class'] }>()
 
 const delegatedProps = computed(() => {
-	const { class: _, ...delegated } = props
+	const { class: delegated } = props
 
 	return delegated
 })
