@@ -37,9 +37,9 @@
 				</h1>
 
 				<div :class="cn('w-2/12', 'gap-2', 'flexCol')">
-					<div :class="cn('flexBetween', 'text-white')">
+					<div :class="cn('flexBetween items-center', 'text-white')">
 						<span>Shop now</span>
-						arrow
+						<Icon name="lucide:move-right" />
 					</div>
 
 					<span :class="cn('w-full h-[1px]', 'bg-beige')"></span>
