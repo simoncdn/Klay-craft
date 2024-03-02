@@ -3,11 +3,12 @@ import Input from '../ui/input/Input.vue'
 import { useToast } from '../ui/toast'
 
 const { toast } = useToast()
-
 const handleSuscribe = () => {
-	console.log('suscribed')
 	toast({
-		variant: 'destructive'
+		title: 'Your request has been successfully sent!',
+		description:
+			'Thank you for reaching out to learn more about our pottery workshops. We will get back to you very soon with all the necessary information.',
+		variant: 'default'
 	})
 }
 </script>
