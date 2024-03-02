@@ -25,8 +25,8 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 
 <template>
 	<div :class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center', 'text-beige')">
-		<span class="font-heading text-2xl">KC</span>
-		<div :class="cn('gap-16', 'flexCenter items-baseline')">
+		<h6>KC</h6>
+		<div :class="cn('gap-16', 'flexCenter items-center')">
 			<nav>
 				<ul :class="cn('flex space-x-8')">
 					<li
@@ -37,7 +37,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 								'cursor-pointer relative',
 								'gap-2',
 								'flexCol items-center',
-								'uppercase'
+								'txt-sm uppercase'
 							)
 						"
 					>

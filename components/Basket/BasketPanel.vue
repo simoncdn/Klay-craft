@@ -19,7 +19,7 @@ import BasketPanelProduct from './BasketPanelProduct.vue'
 		</SheetTrigger>
 		<SheetContent :class="cn('gap-8', 'flexBetween flexCol')">
 			<SheetHeader>
-				<SheetTitle :class="cn('')">SHOPPING CART</SheetTitle>
+				<SheetTitle>SHOPPING CART</SheetTitle>
 				<SheetDescription>
 					Please note that although you can test the payment functionality, no actual
 					charge will be made to your account. This step is designed solely for
@@ -37,11 +37,11 @@ import BasketPanelProduct from './BasketPanelProduct.vue'
 			</ul>
 
 			<SheetFooter :class="cn('border-t border-carbon')">
-				<div :class="cn('w-full', 'py-4', 'flexBetween')">
+				<div :class="cn('w-full', 'py-4', 'flexBetween', 'txt-sm')">
 					SUBTOTAL: <span class="font-semibold">00.00$</span>
 				</div>
 
-				<Button shape="roundedNone" variant="solid" :class="cn('text-lg font-heading')"
+				<Button shape="roundedNone" variant="solid" :class="cn('heading-6')"
 					>Checkout</Button
 				>
 			</SheetFooter>

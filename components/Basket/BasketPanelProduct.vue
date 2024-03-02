@@ -16,8 +16,8 @@ defineProps<{ product: Product }>()
 
 		<div :class="cn('h-full w-full', 'flexBetween flexCol')">
 			<div :class="cn('gap-2', 'flexCol')">
-				<h4 class="font-heading text-sm">{{ product.name }}</h4>
-				<span>{{ formatPrice(product.price) }}</span>
+				<h6>{{ product.name }}</h6>
+				<span class="txt-xs font-medium">{{ formatPrice(product.price) }}</span>
 			</div>
 
 			<div :class="cn('w-full h-fit', 'gap-6', 'flexBetween items-end')">
@@ -38,7 +38,7 @@ defineProps<{ product: Product }>()
 								'border-x border-x-carbon',
 								'py-1',
 								'flexCenter',
-								'text-xs'
+								'txt-xs'
 							)
 						"
 						>{{ product.quantity }}</span
@@ -54,11 +54,8 @@ defineProps<{ product: Product }>()
 					</Button>
 				</div>
 
-				<button
-					variant="ghost"
-					:class="cn('flex-1', 'py-0', 'text-normal', 'hover:underline')"
-				>
-					Delete
+				<button variant="ghost" :class="cn('flex-1', 'py-0', 'txt-xs', 'hover:underline')">
+					DELETE
 				</button>
 			</div>
 		</div>
