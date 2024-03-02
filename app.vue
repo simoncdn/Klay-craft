@@ -1,9 +1,9 @@
-<script setup></script>
+<script setup lang="ts"></script>
 
 <template>
-	<!-- <NuxtPage /> -->
+	<NuxtPage />
 
-	<div class="w-full h-screen flexCenter text-lg xl:text-6xl font-heading">
-		🚧 Coming soon 🚧
-	</div>
+	<!-- <div class="w-full h-screen flexCenter text-lg xl:text-6xl font-heading"> -->
+	<!-- 	🚧 Coming soon 🚧 -->
+	<!-- </div> -->
 </template>
