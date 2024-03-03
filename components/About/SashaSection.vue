@@ -23,26 +23,23 @@
 
 			<div :class="cn('flexBetween', 'txt-sm')">
 				<p class="w-5/12">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe non
-					dolores corrupti incidunt dignissimos vitae culpa dolore odio. Possimus nostrum
-					quaerat veritatis deleniti impedit et recusandae similique excepturi totam quae?
-					Obcaecati, voluptatibus numquam? Minus est accusantium architecto eius animi
-					exercitationem soluta? Ratione sapiente nihil saepe at aspernatur, velit
-					asperiores!
+					Sasha fell in love with pottery during a trip to Asia, where she discovered the
+					ancestral techniques of master potters. This experience not only awakened in her
+					a deep respect for this ancient art but also ignited a passion that has not left
+					her since. Back in Australia, she decided to pursue this path, combining
+					traditional methods with her own modern touch.
 				</p>
 				<p class="w-5/12">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe non
-					dolores corrupti incidunt dignissimos vitae culpa dolore odio. Possimus nostrum
-					quaerat veritatis deleniti impedit et recusandae similique excepturi totam quae?
-					Obcaecati, voluptatibus numquam? Minus est accusantium architecto eius animi
-					exercitationem soluta? Ratione sapiente nihil saepe at aspernatur, velit
-					asperiores!
+					What fascinates Sasha about pottery is the transformation of clay into objects
+					that are both beautiful and useful. For her, each piece is a journey - from the
+					earth to the hand, then to the heart. Her artistic approach is based on a deep
+					connection with nature and an unceasing quest for sustainability in her work.
 				</p>
 			</div>
 
 			<h5 class="text-center">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsa laudantium
-				illo dolore explicabo rem delectus maxime ad sed ab?
+				Pottery is more than an art to me; it's a meditation, a return to the basics, where
+				every gesture and form tells a story.
 			</h5>
 		</div>
 	</div>
