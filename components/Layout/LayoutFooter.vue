@@ -15,21 +15,21 @@
 
 		<div :class="cn('flex-1', 'gap-8', 'flexBetween', 'txt-sm')">
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">
-				<nuxt-link to="/" class="hover:underline">Home</nuxt-link>
-				<nuxt-link to="/about" class="hover:underline">Our world</nuxt-link>
-				<nuxt-link to="/products" class="hover:underline">Ceramics</nuxt-link>
+				<NuxtLink to="/" class="hover:underline">Home</NuxtLink>
+				<NuxtLink to="/about" class="hover:underline">Our world</NuxtLink>
+				<NuxtLink to="/products" class="hover:underline">Ceramics</NuxtLink>
 			</div>
 
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">
-				<nuxt-link to="#" class="hover:underline">Facebook</nuxt-link>
-				<nuxt-link to="#" class="over:underline">Instagram</nuxt-link>
+				<NuxtLink to="#" class="hover:underline">Facebook</NuxtLink>
+				<NuxtLink to="#" class="over:underline">Instagram</NuxtLink>
 			</div>
 
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">
 				<p>Design & Made by love <br />by Simon Cardona</p>
 
-				<nuxt-link to="https://simoncardona.netlify.app/" class="hover:underline"
-					>Portfolio</nuxt-link
+				<NuxtLink to="https://simoncardona.netlify.app/" class="hover:underline"
+					>Portfolio</NuxtLink
 				>
 			</div>
 
@@ -38,8 +38,8 @@
 					Hope you enjoy, <br />
 					feel free to contact me
 				</h6>
-				<nuxt-link to="mailto:cdna.simon@gmail.com" class="hover:underline"
-					>cdna.simon@gmail.com</nuxt-link
+				<NuxtLink to="mailto:cdna.simon@gmail.com" class="hover:underline"
+					>cdna.simon@gmail.com</NuxtLink
 				>
 			</div>
 		</div>

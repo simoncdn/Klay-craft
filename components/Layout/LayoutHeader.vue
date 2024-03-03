@@ -25,7 +25,9 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 
 <template>
 	<div :class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center', 'text-beige')">
-		<h6>KC</h6>
+		<NuxtLink to="/">
+			<h6>KC</h6>
+		</NuxtLink>
 		<div :class="cn('gap-16', 'flexCenter items-center')">
 			<nav>
 				<ul :class="cn('flex space-x-8')">
@@ -41,7 +43,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 							)
 						"
 					>
-						<nuxt-link :to="route.path">{{ route.name }}</nuxt-link>
+						<NuxtLink :to="route.path">{{ route.name }}</NuxtLink>
 						<span
 							v-if="isSelected(route.path)"
 							:class="
