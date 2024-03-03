@@ -22,7 +22,7 @@
 
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">
 				<NuxtLink to="#" class="hover:underline">Facebook</NuxtLink>
-				<NuxtLink to="#" class="over:underline">Instagram</NuxtLink>
+				<NuxtLink to="#" class="hover:underline">Instagram</NuxtLink>
 			</div>
 
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">

@@ -22,7 +22,9 @@
 					</p>
 				</div>
 
-				<NuxtLink to="/about" :class="cn('w-fit', 'flexCol')"
+				<NuxtLink
+					to="/about"
+					:class="cn('w-fit', 'flexCol', 'hover:opacity-70 transition-all duration-300')"
 					>READ OUR STORY
 
 					<span :class="cn('w-full h-[1px]', 'bg-carbon')"></span>

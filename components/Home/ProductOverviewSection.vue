@@ -26,7 +26,10 @@ const translateX = computed(() => {
 		<div :class="cn('h-full w-full', 'gap-8', 'flex flex-row items-start')">
 			<div :class="cn('h-full w-fit', 'flexCenter')">
 				<h3 :class="cn('-rotate-90', 'text-center')">
-					<router-link to="/products" class="hover:opacity-70">
+					<router-link
+						to="/products"
+						class="hover:opacity-70 transition-all duration-300"
+					>
 						Shop all <br />
 						ceramics
 					</router-link>

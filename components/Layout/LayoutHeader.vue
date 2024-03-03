@@ -43,7 +43,11 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 							)
 						"
 					>
-						<NuxtLink :to="route.path">{{ route.name }}</NuxtLink>
+						<NuxtLink
+							:to="route.path"
+							class="hover:opacity-70 transition-all duration-300"
+							>{{ route.name }}</NuxtLink
+						>
 						<span
 							v-if="isSelected(route.path)"
 							:class="

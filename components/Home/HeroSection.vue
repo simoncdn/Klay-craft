@@ -28,10 +28,16 @@ import LayoutHeader from '../Layout/LayoutHeader.vue'
 			</h1>
 
 			<div :class="cn('w-2/12', 'gap-2', 'flexCol')">
-				<div :class="cn('flexBetween items-center', 'text-beige txt-sm')">
-					<span>Shop now</span>
-					<Icon name="lucide:move-right" />
-				</div>
+				<NuxtLink
+					to="/products"
+					:class="cn('group', 'flexBetween items-center', 'text-beige txt-sm')"
+				>
+					<span class="group-hover:opacity-70 transition-all duration-300">Shop now</span>
+					<Icon
+						name="lucide:move-right"
+						class="group-hover:translate-x-2 transition-all duration-300"
+					/>
+				</NuxtLink>
 
 				<span :class="cn('w-full h-[1px]', 'bg-beige')"></span>
 			</div>
