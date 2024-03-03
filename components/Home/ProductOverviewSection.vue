@@ -43,7 +43,7 @@ const translateX = computed(() => {
 						class="w-64 h-96 flex-shrink-0"
 					>
 						<router-link
-							:to="`/product/${product.id}`"
+							:to="`/products/${product.id}`"
 							:class="cn('h-full group', 'gap-4', 'flexCol')"
 						>
 							<div class="relative h-full w-full">
