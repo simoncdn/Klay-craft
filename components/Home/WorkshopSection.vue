@@ -14,38 +14,27 @@ const handleSuscribe = () => {
 </script>
 
 <template>
-	<div :class="cn('section', 'py-32 gap-16', 'flex')">
-		<div :class="cn('flex-1', 'flexCenter')">
-			<NuxtImg
-				src="/images/ceramics_workshop.jpg"
-				alt="workshop"
-				:class="cn('w-full h-5/6', 'object-cover')"
-			/>
+	<div :class="cn('section', 'py-32', 'flexBetween')">
+		<div :class="cn('w-7/12', 'flexCenter')">
+			<NuxtImg src="/images/ceramics_workshop.jpg" alt="workshop" :class="cn('w-full h-5/6', 'object-cover')" />
 		</div>
-		<div :class="cn('relative', 'w-4/12', 'flexCenter')">
-			<h2 class="absolute right-0 top-16">Workshop</h2>
+		<div :class="cn('relative', 'w-4/12', 'gap-16', 'flexCol justify-center items-end')">
+			<h2 class="whitespace-nowrap text-center">Workshop</h2>
 
-			<div :class="cn('gap-8', 'flexCol')">
+			<div :class="cn('gap-8', 'flexCol', 'txt-sm')">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas ex eu
-					massa pulvinar, ac aliquet dui mollis. Mauris consequat scelerisque elit, id
-					rutrum urna sagittis.
-				</p>
+					Dive into the world of pottery with us at our exclusive workshops. Whether
+					you're a beginner eager to get your hands dirty or an experienced potter looking to refine your skills,
+					our sessions are designed to inspire creativity and share the joy of pottery making. <br /> Space is
+					limited,
+					so don’t miss your chance to be part of this unique experience. </p>
 
 				<div :class="cn('w-full', 'gap-1', 'flexCol')">
 					<div :class="cn('gap-2', 'flexBetween')">
 						<Input placeholder="Email" />
-						<Button
-							variant="ghost"
-							size="icon"
-							shape="roundedNone"
-							class="group hover:bg-mistyGreen/20 transition-all duration-300"
-							@click="handleSuscribe"
-						>
-							<Icon
-								name="lucide:send"
-								class="group-hover:rotate-45 transition-all duration-300"
-							/>
+						<Button variant="ghost" size="icon" shape="roundedNone"
+							class="group hover:bg-mistyGreen/20 transition-all duration-300" @click="handleSuscribe">
+							<Icon name="lucide:send" class="group-hover:rotate-45 transition-all duration-300" />
 						</Button>
 					</div>
 					<span :class="cn('w-full h-[1px]', 'bg-carbon')"></span>
