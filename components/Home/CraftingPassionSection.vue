@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'py-16', 'flexBetween items-center')">
+	<div :class="cn('section', 'flexBetween items-center')">
 		<div :class="cn('w-4/12 h-full', 'gap-16', 'flexCol justify-center')">
 			<h4>Pottery is the quiet expression of the eternal time</h4>
 

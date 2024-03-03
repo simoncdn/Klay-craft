@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('h-full w-full', 'gap-32', 'flexCol')">
+	<div :class="cn('h-full w-full', 'gap-16', 'flexCol')">
 		<AboutHeroSection />
 		<AboutSashaSection />
 		<AboutSkylarSection />

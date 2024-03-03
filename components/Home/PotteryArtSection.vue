@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'py-16', 'flexBetween')">
+	<div :class="cn('section', 'flexBetween')">
 		<div :class="cn('relative', 'w-5/12 h-full')">
 			<NuxtImg
 				src="/images/ceramic_art_1.jpg"

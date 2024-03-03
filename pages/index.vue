@@ -9,7 +9,7 @@ import FooterSection from '~/components/Layout/LayoutFooter.vue'
 </script>
 
 <template>
-	<div :class="cn('h-full w-full', 'flexCol')">
+	<div :class="cn('h-full w-full', 'gap-16', 'flexCol')">
 		<HeroSection />
 		<AboutSection />
 		<WorkshopSection />
