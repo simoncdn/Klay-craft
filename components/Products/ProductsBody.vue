@@ -1,10 +1,63 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const currentGrid = ref(4)
+
+const handleGridChange = (grid: number) => {
+	return (currentGrid.value = grid)
+}
+</script>
 
 <template>
 	<div :class="cn('h-full w-full', 'paddingX gap-4', 'flexCol')">
-		<div :class="cn('w-full h-16', 'bg-purple-100')">Toolbar</div>
+		<div :class="cn('w-full h-fit', 'py-2', 'flexBetween')">
+			<div :class="cn('gap-2', 'flexCenter', 'txt-sm')">
+				<span class="text-mistyGreen">FILTER</span>
+				<span class="bg-carbon w-[1px] h-4"></span>
+				<span :class="cn('gap-2', 'flexCenter')"
+					>ARTIST
+					<Icon name="lucide:chevron-down" />
+				</span>
+			</div>
+			<div :class="cn('h-full w-fit', 'gap-8', 'flexBetween items-center')">
+				<div :class="cn('gap-1', 'flexCenter', 'text-carbon text-lg')">
+					<Button
+						variant="ghostCarbon"
+						size="fit"
+						shape="roundedNone"
+						:class="cn('p-1', { 'bg-carbon/10': currentGrid === 4 })"
+						@click="handleGridChange(4)"
+					>
+						<Icon name="fluent:grid-16-filled" />
+					</Button>
+					<Button
+						variant="ghostCarbon"
+						size="fit"
+						shape="roundedNone"
+						:class="cn('p-1', { 'bg-carbon/10': currentGrid === 2 })"
+						@click="handleGridChange(2)"
+					>
+						<Icon name="fluent:layout-column-two-16-filled" />
+					</Button>
+				</div>
 
-		<ul :class="cn('h-fit', 'gap-4', 'grid grid-cols-4 auto-rows-fit')">
+				<div :class="cn('h-fit', 'gap-2', 'flexCenter', 'txt-sm')">
+					<span class="text-mistyGreen">SORT BY</span>
+					<span class="bg-carbon w-[1px] h-4"></span>
+					<span :class="cn('gap-2', 'flexCenter')"
+						>DEFAULT
+						<Icon name="lucide:chevron-down" />
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<ul
+			:class="cn('h-fit', 'gap-x-4 gap-y-8', 'grid auto-rows-fit')"
+			:style="{
+				gridTemplateColumns: `repeat(${currentGrid}, minmax(0,1fr))`
+			}"
+		>
 			<li
 				v-for="product in products"
 				:key="product.id"

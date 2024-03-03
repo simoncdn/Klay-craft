@@ -10,6 +10,8 @@ export const buttonVariants = cva(
 				default:
 					'bg-slate-900 text-slate-50 hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90',
 				solid: 'bg-carbon text-white rounded-none hover:bg-carbon/90 active:bg-carbon dark:hover:bg-white/90 dark:hover:text-carbon',
+				ghostCarbon:
+					'hover:bg-carbon/10 active:bg-carbon dark:hover:bg-white/90 dark:hover:text-carbon',
 				ghost: 'hover:bg-white/10 active:bg-white/20 dark:hover:bg-carbon/90 dark:hover:text-slate-50',
 				darkGhost:
 					'text-carbon hover:bg-carbon hover:text-white active:bg-carbon/90 dark:hover:bg-white/10 dark:hover:text-slate-50 transition-all duration-300'
@@ -19,7 +21,8 @@ export const buttonVariants = cva(
 				sm: 'h-9 rounded-md px-3',
 				lg: 'h-11 rounded-md px-8',
 				icon: 'h-10 w-10',
-				full: 'h-full w-full'
+				full: 'h-full w-full',
+				fit: 'h-fit w-fit'
 			},
 			shape: {
 				default: 'rounded-md',
