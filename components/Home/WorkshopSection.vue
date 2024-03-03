@@ -34,7 +34,7 @@ const handleSuscribe = () => {
 
 				<div :class="cn('w-full', 'gap-1', 'flexCol')">
 					<div :class="cn('gap-2', 'flexBetween')">
-						<Input />
+						<Input placeholder="Email" />
 						<Button
 							variant="ghost"
 							size="icon"

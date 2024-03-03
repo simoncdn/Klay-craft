@@ -20,7 +20,7 @@
 		</video>
 
 		<div :class="cn('paddingX gap-24 mt-24', 'flexCol')">
-			<h1 :class="cn('z-20', 'flexCol', 'text-beige')">
+			<h1 :class="cn('z-20', 'flexCol', 'text-[clamp(3rem, 20vmin, 20rem)] leading-none font-heading text-beige')">
 				<span>KLAY</span>
 				<span>CRAFT</span>
 			</h1>

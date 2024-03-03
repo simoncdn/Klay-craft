@@ -19,7 +19,7 @@ export const toastVariants = cva(
 		variants: {
 			variant: {
 				default:
-					'border-mistyGreen/30 bg-mistyGreen/20 text-carbon dark:bg-slate-950 dark:text-slate-50',
+					'border-mistyGreen/30 bg-lightGray text-carbon dark:bg-slate-950 dark:text-slate-50',
 				destructive:
 					'destructive group border-red-500 bg-red-500 text-slate-50 dark:border-red-900 dark:bg-red-900 dark:text-slate-50'
 			}
