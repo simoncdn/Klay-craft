@@ -2,6 +2,16 @@
 import BasketPanel from '../Basket/BasketPanel.vue'
 import { Button } from '../ui/button'
 
+defineProps({
+	textColor: {
+		type: String,
+		default: 'text-beige'
+	},
+	backgroundColor: {
+		type: String,
+		default: 'bg-beige'
+	}
+})
 const routes = [
 	{
 		name: 'home',
@@ -24,7 +34,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 </script>
 
 <template>
-	<div :class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center', 'text-beige')">
+	<div :class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center', textColor)">
 		<NuxtLink to="/">
 			<h6>KC</h6>
 		</NuxtLink>
@@ -54,7 +64,8 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 								cn(
 									'absolute -bottom-4',
 									'w-1.5 h-1.5',
-									'rounded-full bg-white',
+									'rounded-full',
+									backgroundColor,
 									'mx-auto'
 								)
 							"
