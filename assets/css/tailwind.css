@@ -14,6 +14,9 @@
 		color: #373737;
 	}
 
+	h1 {
+		@apply font-heading text-clamp leading-none;
+	}
 	h2 {
 		@apply font-heading text-9xl;
 	}

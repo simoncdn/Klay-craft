@@ -10,6 +10,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				clamp: 'clamp(3rem, 20vmin, 20rem)'
+			},
 			colors: {
 				carbon: '#373737',
 				white: '#DFDEDA',
