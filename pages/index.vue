@@ -5,6 +5,7 @@ import HeroSection from '~/components/Home/HeroSection.vue'
 import PotteryArtSection from '~/components/Home/PotteryArtSection.vue'
 import ProductOverviewSection from '~/components/Home/ProductOverviewSection.vue'
 import WorkshopSection from '~/components/Home/WorkshopSection.vue'
+import FooterSection from '~/components/Layout/LayoutFooter.vue'
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import WorkshopSection from '~/components/Home/WorkshopSection.vue'
 		<ProductOverviewSection />
 		<PotteryArtSection />
 		<CraftingPassionSection />
+		<FooterSection />
 	</div>
 </template>
