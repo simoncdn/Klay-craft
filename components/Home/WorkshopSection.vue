@@ -15,11 +15,11 @@ const handleSuscribe = () => {
 
 <template>
 	<div :class="cn('section', 'py-32 gap-16', 'flex')">
-		<div :class="cn('bg-blue-200', 'flex-1')">
+		<div :class="cn('flex-1', 'flexCenter')">
 			<NuxtImg
 				src="/images/ceramics_workshop.jpg"
 				alt="workshop"
-				:class="cn('w-full h-full', 'object-cover')"
+				:class="cn('w-full h-5/6', 'object-cover')"
 			/>
 		</div>
 		<div :class="cn('relative', 'w-4/12', 'flexCenter')">

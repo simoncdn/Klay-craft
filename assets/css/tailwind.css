@@ -13,21 +13,23 @@
 		font-size: 14px;
 		color: #373737;
 	}
-	h1 {
-		@apply font-heading text-[clamp(3rem,20vmin,20rem)] leading-none;
-	}
+
 	h2 {
 		@apply font-heading text-9xl;
 	}
+
 	h3 {
 		@apply font-heading text-6xl;
 	}
+
 	h4 {
 		@apply font-heading text-3xl;
 	}
+
 	h5 {
 		@apply font-heading text-2xl;
 	}
+
 	h6 {
 		@apply font-heading text-lg;
 	}
@@ -40,9 +42,11 @@
 		width: 100%;
 		height: 100%;
 	}
+
 	.section {
-		@apply relative h-screen w-full paddingX bg-beige;
+		@apply relative h-screen w-screen paddingX bg-beige;
 	}
+
 	.flexCol {
 		display: flex;
 		flex-direction: column;
@@ -58,23 +62,40 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	.paddingX {
 		@apply px-4 md:px-8 xl:px-16;
+	}
+
+	.heading-1 {
 	}
 	.heading-5 {
 		@apply text-xl xl:text-2xl font-heading;
 	}
+
 	.heading-6 {
 		@apply text-lg font-heading;
 	}
+
 	.txt-base {
 		@apply text-base font-body;
 	}
+
 	.txt-sm {
 		@apply text-sm font-body;
 	}
+
 	.txt-xs {
 		@apply text-xs font-body;
+	}
+
+	.scrollbar-none::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scrollbar-none {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 }
 

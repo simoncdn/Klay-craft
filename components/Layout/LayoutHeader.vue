@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BasketPanel from './Basket/BasketPanel.vue'
-import { Button } from './ui/button'
+import BasketPanel from '../Basket/BasketPanel.vue'
+import { Button } from '../ui/button'
 
 const routes = [
 	{
