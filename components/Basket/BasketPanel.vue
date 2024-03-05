@@ -28,13 +28,26 @@ import BasketPanelProduct from './BasketPanelProduct.vue'
 				</SheetDescription>
 			</SheetHeader>
 
-			<ul :class="cn('overflow-auto', 'flex-1 w-full', 'gap-6', 'flexCol')">
+			<ul
+				v-if="products.length > 0"
+				:class="cn('overflow-auto', 'flex-1 w-full', 'gap-6', 'flexCol')"
+			>
 				<BasketPanelProduct
 					v-for="product in products"
 					:key="product.id"
 					:product="product"
 				/>
 			</ul>
+
+			<div v-else :class="cn('gap-8', 'flexCol flexCenter', 'text-lg font-heading')">
+				<Icon
+					name="lucide:shopping-basket"
+					:class="
+						cn('w-20 h-20', 'p-4', 'rounded-full bg-mistyGreen/20', 'text-carbon/60')
+					"
+				/>
+				<span>Your bag is empty !</span>
+			</div>
 
 			<SheetFooter :class="cn('border-t border-carbon')">
 				<div :class="cn('w-full', 'py-4', 'flexBetween', 'txt-sm')">

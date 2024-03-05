@@ -8,7 +8,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 
 <template>
 	<div :class="cn('w-full h-full', 'flexCol')">
-		<div :class="cn('w-full h-screen', ' pb-16 gap-8', 'flexCol')">
+		<div :class="cn('w-full h-full', ' pb-16 gap-8', 'flexCol')">
 			<LayoutHeader text-color="text-carbon" background-color="bg-carbon" />
 
 			<div :class="cn('w-full h-full', 'paddingX gap-8', 'flexCol')">
@@ -22,14 +22,22 @@ const product = products.find((product) => product.id === Number(productSlugId))
 						class="rotate-180 hover:-translate-x-2 transition-all duration-300"
 					/>
 				</NuxtLink>
-				<div :class="cn('w-full h-full', 'flexBetween')">
-					<div :class="cn('w-6/12 h-full', 'gap-16', 'flexCol justify-between')">
+				<div
+					:class="
+						cn(
+							'w-full h-full',
+							'gap-8 lg:gap-0',
+							'flex flex-col-reverse lg:flex-row lg:flexBetween'
+						)
+					"
+				>
+					<div :class="cn('w-full lg:w-6/12 h-full', 'gap-8 lg:gap-24', 'flexCol')">
 						<div :class="cn('gap-2', 'flexCol')">
 							<h3>{{ product?.name }}</h3>
 							<span class="txt-base text-mistyGreen">By Sasha Reed</span>
 						</div>
 
-						<div :class="cn('w-8/12', 'gap-8', 'flexCol')">
+						<div :class="cn('w-full lg:w-8/12', 'gap-8', 'flexCol')">
 							<div :class="cn('gap-4', 'flexCol')">
 								<h6 :class="cn('gap-2', 'flex items-center', 'font-body')">
 									DETAILS <span :class="cn('w-6 h-0.5', 'bg-carbon')"></span>
@@ -52,7 +60,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 										:class="cn('w-6 h-0.5', 'bg-carbon')"
 									></span>
 								</h6>
-								<p>
+								<p class="txt-sm">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Doloribus libero numquam incidunt sit, vitae accusantium sequi,
 									nobis eius molestiae adipisci atque maxime praesentium. Rem
@@ -61,7 +69,11 @@ const product = products.find((product) => product.id === Number(productSlugId))
 							</div>
 						</div>
 
-						<div :class="cn('w-8/12 h-10', 'border border-carbon', 'flexCenter')">
+						<div
+							:class="
+								cn('w-full sm:w-8/12 h-10', 'border border-carbon', 'flexCenter')
+							"
+						>
 							<Button
 								variant="darkGhost"
 								size="full"

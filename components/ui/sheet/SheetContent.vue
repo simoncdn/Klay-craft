@@ -27,7 +27,7 @@ const props = defineProps<SheetContentProps>()
 const emits = defineEmits<DialogContentEmits>()
 
 const delegatedProps = computed(() => {
-	const { class: delegated } = props
+	const { class: _, ...delegated } = props
 
 	return delegated
 })

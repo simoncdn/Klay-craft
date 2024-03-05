@@ -52,14 +52,25 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 				<SheetTrigger :class="cn('block lg:hidden')">
 					<Icon name="lucide:align-left" :class="cn('text-2xl')" />
 				</SheetTrigger>
-				<SheetContent>
-					<SheetHeader>
-						<SheetTitle>Are you sure absolutely sure?</SheetTitle>
-						<SheetDescription>
-							This action cannot be undone. This will permanently delete your account
-							and remove your data from our servers.
-						</SheetDescription>
-					</SheetHeader>
+				<SheetContent side="left">
+					<div :class="cn('gap-4', 'flexCol')">
+						<nav>
+							<ul :class="cn('gap-8', 'flexCol items-center')">
+								<li
+									v-for="route in routes"
+									:key="route.path"
+									:class="cn('text-2xl uppercase')"
+								>
+									<NuxtLink
+										:to="route.path"
+										:class="cn('hover:opacity-70 transition-all duration-300')"
+									>
+										{{ route.name }}
+									</NuxtLink>
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</SheetContent>
 			</Sheet>
 		</div>
