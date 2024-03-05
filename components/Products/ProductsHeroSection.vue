@@ -6,9 +6,26 @@ import LayoutHeader from '../Layout/LayoutHeader.vue'
 	<div :class="cn('w-full h-screen', 'flexCol')">
 		<LayoutHeader text-color="text-carbon" background-color="bg-carbon" />
 
-		<div :class="cn('w-full h-full', 'paddingX mt-16', 'flexBetween')">
-			<div :class="cn('relative', 'w-4/12 h-full', 'gap-16', 'flexCol justify-center')">
-				<h1 class="z-10 whitespace-nowrap">CERAMICS</h1>
+		<div
+			:class="
+				cn(
+					'w-full h-full',
+					'paddingX mt-16 gap-4 lg:gap-0',
+					'flex flex-col lg:flex-row lg:flexBetween'
+				)
+			"
+		>
+			<div
+				:class="
+					cn(
+						'relative',
+						'w-full lg:w-4/12 h-fit',
+						'gap-8 lg:gap-16',
+						'flexCol justify-center'
+					)
+				"
+			>
+				<h1 class="z-10 lg:whitespace-nowrap hidden lg:block">CERAMICS</h1>
 				<p :class="cn('uppercase', 'txt-sm')">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas ex eu
 					massa pulvinar, ac aliquet dui mollis.Lorem ipsum dolor sit amet, consectetur
@@ -16,7 +33,7 @@ import LayoutHeader from '../Layout/LayoutHeader.vue'
 				</p>
 			</div>
 
-			<div :class="cn('w-7/12 h-full')">
+			<div :class="cn('w-full lg:w-7/12 h-full')">
 				<NuxtImg
 					src="/images/ceramics_products.jpg"
 					alt="Ceramics"

@@ -1,22 +1,32 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'flexBetween py-16', 'bg-red-200')">
-		<div :class="cn('w-7/12 h-full', 'gap-32', 'flexCol items-center')">
+	<div
+		:class="
+			cn(
+				'section',
+				'py-0 lg:py-16 gap-16 lg:gap-0',
+				'flex flex-col lg:flex-row lg:flexBetween'
+			)
+		"
+	>
+		<div :class="cn('w-full lg:w-7/12 h-full', 'gap-8 lg:gap-32', 'flexCol items-center')">
 			<div :class="cn('gap-4', 'flexCol items-center')">
 				<h3>SKYLAR BENETT</h3>
 				<span class="txt-base text-mistyGreen">BASED IN AUSTRALIA</span>
 			</div>
 
-			<div :class="cn('flexBetween', 'txt-sm')">
-				<p class="w-5/12">
+			<div
+				:class="cn('gap-4 lg:gap-0', 'flex flex-col lg:flex-row lg:flexBetween', 'txt-sm')"
+			>
+				<p class="w-full lg:w-5/12">
 					Skylar has always been fascinated by the creative process, exploring various
 					forms of art before settling on pottery. It's the tactile, down-to-earth aspect
 					of pottery that captivated her, offering a unique means of expression. Her
 					approach to pottery skillfully blends contemporary aesthetics and functionality,
 					making each creation a usable work of art in everyday life.
 				</p>
-				<p class="w-5/12">
+				<p class="w-full lg:w-5/12">
 					For Skylar, pottery is not just a profession; it's a form of dialogue with the
 					world around her. She draws inspiration from natural patterns and the richness
 					of Australian landscapes, seeking to capture the essence of her homeland in
@@ -31,7 +41,7 @@
 				fragility, and our responsibility to preserve it.
 			</h5>
 		</div>
-		<div :class="cn('w-4/12 h-full', 'bg-orange-200')">
+		<div :class="cn('w-full lg:w-4/12 h-full')">
 			<NuxtImg
 				src="/images/skylar_benett.jpg"
 				alt="Skylar Benett"

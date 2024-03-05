@@ -1,8 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'flexBetween items-center')">
-		<div :class="cn('w-4/12 h-full', 'gap-16', 'flexCol justify-center')">
+	<div
+		:class="
+			cn(
+				'section',
+				'gap-16 lg:gap-0',
+				'flex flex-col-reverse lg:flex-row lg:flexBetween lg:items-center'
+			)
+		"
+	>
+		<div :class="cn('w-full lg:w-4/12 h-full', 'gap-8 lg:gap-16', 'flexCol justify-center')">
 			<h4>Pottery is the quiet expression of the eternal time</h4>
 
 			<div :class="cn('gap-6', 'flexCol', 'txt-sm')">
@@ -22,7 +30,7 @@
 				</p>
 			</div>
 		</div>
-		<div :class="cn('relative', 'w-7/12 h-5/6', 'flexCenter')">
+		<div :class="cn('relative', 'w-full lg:w-7/12 h-full lg:h-5/6', 'flexCenter')">
 			<NuxtImg
 				src="/images/ceramic_art_2.jpg"
 				alt="pottery art"

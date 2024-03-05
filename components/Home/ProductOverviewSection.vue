@@ -17,25 +17,41 @@ const translateX = computed(() => {
 </script>
 
 <template>
-	<div :class="cn('section', 'py-16 gap-16', 'flexCol')">
+	<div :class="cn('section', 'gap-16', 'flexCol')">
 		<h2 class="text-center h-fit">
 			New in <br />
 			Selection
 		</h2>
 
-		<div :class="cn('h-full w-full', 'gap-8', 'flex flex-row items-start')">
+		<div :class="cn('h-full w-full', 'gap-8', 'flex flex-col lg:flex-row items-start')">
 			<div :class="cn('h-full w-fit', 'flexCenter')">
-				<h3 :class="cn('-rotate-90', 'text-center')">
+				<h3 :class="cn('lg:-rotate-90', 'text-center')">
 					<router-link
 						to="/products"
-						class="hover:opacity-70 transition-all duration-300"
+						:class="cn('hover:opacity-70 transition-all duration-300')"
 					>
-						Shop all <br />
-						ceramics
+						<span class="flex gap-4 lg:hidden"
+							>Shop all ceramics
+							<NuxtImg src="/images/arrow.svg" alt="arrow right" />
+						</span>
+
+						<span class="hidden lg:block">
+							Shop all<br />
+							ceramics
+						</span>
 					</router-link>
 				</h3>
 			</div>
-			<div :class="cn('relative overflow-x-hidden', 'w-full h-full')">
+			<div
+				:class="
+					cn(
+						'relative overflow-x-hidden',
+						'w-full h-full',
+						'gap-8 lg:gap-0',
+						'flex flex-col items-start lg:block'
+					)
+				"
+			>
 				<ul
 					ref="productsList"
 					:class="cn('overflow-x-auto scrollbar-none', 'min-w-0 w-full', 'gap-4', 'flex')"
@@ -91,7 +107,12 @@ const translateX = computed(() => {
 
 				<div
 					:class="
-						cn('absolute left-0 -bottom-0', 'w-4/12 bg-lightGray', 'm-auto', 'flex')
+						cn(
+							'block lg:absolute left-0 -bottom-0',
+							'w-4/12 bg-lightGray',
+							'lg:m-auto',
+							'flex'
+						)
 					"
 				>
 					<span

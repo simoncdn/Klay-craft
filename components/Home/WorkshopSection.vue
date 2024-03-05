@@ -14,16 +14,33 @@ const handleSuscribe = () => {
 </script>
 
 <template>
-	<div :class="cn('section', 'py-32', 'flexBetween')">
-		<div :class="cn('w-7/12', 'flexCenter')">
+	<div
+		:class="
+			cn(
+				'section',
+				'lg:py-32 gap-16 lg:gap-0',
+				'flex flex-col-reverse lg:flex-row flexBetween'
+			)
+		"
+	>
+		<div :class="cn('w-full lg:w-7/12', 'flexCenter')">
 			<NuxtImg
 				src="/images/ceramics_workshop.jpg"
 				alt="workshop"
 				:class="cn('w-full h-5/6', 'object-cover')"
 			/>
 		</div>
-		<div :class="cn('relative', 'w-4/12', 'gap-16', 'flexCol justify-center items-end')">
-			<h2 class="whitespace-nowrap text-center">Workshop</h2>
+		<div
+			:class="
+				cn(
+					'relative',
+					'w-full lg:w-4/12',
+					'gap-16',
+					'flexCol justify-center items-center lg:items-end'
+				)
+			"
+		>
+			<h2 class="lg:whitespace-nowrap text-center">Workshop</h2>
 
 			<div :class="cn('gap-8', 'flexCol', 'txt-sm')">
 				<p>

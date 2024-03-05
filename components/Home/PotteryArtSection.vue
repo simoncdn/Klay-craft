@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'flexBetween')">
-		<div :class="cn('relative', 'w-5/12 h-full')">
+	<div :class="cn('section', 'gap-16 lg:gap-0', 'flex flex-col lg:flex-row lg:flexBetween')">
+		<div :class="cn('relative', 'w-full lg:w-5/12 h-full')">
 			<NuxtImg
 				src="/images/ceramic_art_1.jpg"
 				alt="pottery art"
@@ -10,7 +10,7 @@
 			/>
 			<span :class="cn('absolute left-0 -bottom-2', 'w-5/12 h-[1px]', 'bg-carbon')"></span>
 		</div>
-		<div :class="cn('w-6/12 h-full', 'gap-16', 'flexCol justify-center')">
+		<div :class="cn('w-full lg:w-6/12 h-full', 'gap-8 lg:gap-16', 'flexCol justify-center')">
 			<h4>
 				Every piece of pottery carries within it the soul of its creator.It is a dance
 				between clay and artist, where every touch brings to life a form that didn't exist

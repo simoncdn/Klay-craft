@@ -1,6 +1,8 @@
 export type Product = {
 	id: number
 	name: string
+	artist?: string
+	measurements?: string
 	description: string
 	price: number
 	image: string
@@ -12,6 +14,7 @@ export const products: Product[] = [
 		id: 0,
 		name: 'APHRODITE NO.1',
 		description: 'Body vase 18"',
+		artist: 'Sasha Reed',
 		price: 64,
 		image: '/images/aphrodite_no1.png',
 		quantity: 0

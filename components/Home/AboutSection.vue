@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'py-16', 'flexBetween')">
-		<div :class="cn('relative w-5/12 h-full', 'gap-16', 'flexCol justify-center')">
-			<h2 class="z-10 whitespace-nowrap">OUR WORLD</h2>
+	<div :class="cn('section', 'lg:py-16 gap-16 lg:gap-0', 'flexCol lg:flex-row lg:flexBetween')">
+		<div :class="cn('relative w-full lg:w-5/12 h-full', 'gap-16', 'flexCol justify-center')">
+			<h2 class="z-10 lg:whitespace-nowrap text-center lg:text-left">OUR WORLD</h2>
 
 			<div :class="cn('gap-16', 'flexCol justify-center')">
 				<div :class="cn('w-full', 'gap-8', 'flexCol', 'txt-sm')">
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 
-		<div :class="cn('relative', 'w-6/12')">
+		<div :class="cn('relative', 'w-full lg:w-6/12')">
 			<span :class="cn('absolute bottom-0 -left-2', 'h-2/6 w-[1px]', 'bg-carbon')"></span>
 			<NuxtImg
 				src="/images/Sasha_Skylar.jpg"

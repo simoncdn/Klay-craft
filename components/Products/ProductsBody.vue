@@ -1,12 +1,4 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const currentGrid = ref(4)
-
-const handleGridChange = (grid: number) => {
-	return (currentGrid.value = grid)
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<div :class="cn('h-full w-full', 'paddingX gap-4', 'flexCol')">
@@ -20,27 +12,6 @@ const handleGridChange = (grid: number) => {
 				</span>
 			</div>
 			<div :class="cn('h-full w-fit', 'gap-8', 'flexBetween items-center')">
-				<div :class="cn('gap-1', 'flexCenter', 'text-carbon text-lg')">
-					<Button
-						variant="ghostCarbon"
-						size="fit"
-						shape="roundedNone"
-						:class="cn('p-1', { 'bg-carbon/10': currentGrid === 4 })"
-						@click="handleGridChange(4)"
-					>
-						<Icon name="fluent:grid-16-filled" />
-					</Button>
-					<Button
-						variant="ghostCarbon"
-						size="fit"
-						shape="roundedNone"
-						:class="cn('p-1', { 'bg-carbon/10': currentGrid === 2 })"
-						@click="handleGridChange(2)"
-					>
-						<Icon name="fluent:layout-column-two-16-filled" />
-					</Button>
-				</div>
-
 				<div :class="cn('h-fit', 'gap-2', 'flexCenter', 'txt-sm')">
 					<span class="text-mistyGreen">SORT BY</span>
 					<span class="bg-carbon w-[1px] h-4"></span>
@@ -53,10 +24,13 @@ const handleGridChange = (grid: number) => {
 		</div>
 
 		<ul
-			:class="cn('h-fit', 'gap-x-4 gap-y-8', 'grid auto-rows-fit')"
-			:style="{
-				gridTemplateColumns: `repeat(${currentGrid}, minmax(0,1fr))`
-			}"
+			:class="
+				cn(
+					'h-fit',
+					'gap-x-4 gap-y-8',
+					'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fit'
+				)
+			"
 		>
 			<li
 				v-for="product in products"
