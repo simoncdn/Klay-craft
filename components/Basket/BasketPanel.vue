@@ -1,6 +1,15 @@
 <script setup lang="ts">
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger
+} from '../ui/sheet'
 import { products } from '~/utils/products'
 import { buttonVariants } from '../ui/button'
+import BasketPanelProduct from './BasketPanelProduct.vue'
 </script>
 
 <template>

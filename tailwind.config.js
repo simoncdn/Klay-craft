@@ -11,8 +11,7 @@ export default {
 	theme: {
 		extend: {
 			fontSize: {
-				clamp: 'clamp(3rem, 20vmin, 20rem)',
-				'clamp-xs': 'clamp(3rem, 16vmin, 16rem)'
+				clamp: 'clamp(3rem, 20vmin, 20rem)'
 			},
 			colors: {
 				carbon: '#373737',
