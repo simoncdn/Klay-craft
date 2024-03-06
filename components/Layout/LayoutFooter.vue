@@ -5,13 +5,13 @@
 		:class="
 			cn(
 				'w-full',
-				'paddingX gap-16 py-8',
+				'paddingX py-8 gap-16',
 				'border-t border-t-carbon bg-beige',
 				'flexBetween items-center'
 			)
 		"
 	>
-		<h3 class="w-3/12 font-bold">Klay Craft</h3>
+		<h3 class="font-bold w-3/12">Klay Craft</h3>
 
 		<div :class="cn('flex-1', 'gap-8', 'flexBetween', 'txt-sm')">
 			<div :class="cn('h-full', 'gap-4', 'flexCol')">

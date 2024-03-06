@@ -53,7 +53,7 @@ watchEffect(() => {
 								>
 									<NuxtLink
 										:to="route.path"
-										:class="cn('transition-all duration-300 hover:opacity-70')"
+										:class="cn('hover:opacity-70 transition-all duration-300')"
 									>
 										{{ route.name }}
 									</NuxtLink>
@@ -73,7 +73,7 @@ watchEffect(() => {
 						:key="route.path"
 						:class="
 							cn(
-								'relative cursor-pointer',
+								'cursor-pointer relative',
 								'gap-2',
 								'flexCol items-center',
 								'txt-sm uppercase'
@@ -82,13 +82,13 @@ watchEffect(() => {
 					>
 						<NuxtLink
 							:to="route.path"
-							class="transition-all duration-300 hover:opacity-70"
+							class="hover:opacity-70 transition-all duration-300"
 							>{{ route.name }}
 						</NuxtLink>
 						<span
 							v-if="isSelected(route.path)"
 							:class="
-								cn('absolute -bottom-4', 'h-1.5 w-1.5', 'rounded-full', 'mx-auto')
+								cn('absolute -bottom-4', 'w-1.5 h-1.5', 'rounded-full', 'mx-auto')
 							"
 							:style="{ backgroundColor: activeColor }"
 						></span>

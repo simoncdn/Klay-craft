@@ -21,7 +21,7 @@ import { buttonVariants } from '../ui/button'
 
 			<ul
 				v-if="products.length > 0"
-				:class="cn('overflow-auto', 'w-full flex-1', 'gap-6', 'flexCol')"
+				:class="cn('overflow-auto', 'flex-1 w-full', 'gap-6', 'flexCol')"
 			>
 				<BasketPanelProduct
 					v-for="product in products"
@@ -30,11 +30,11 @@ import { buttonVariants } from '../ui/button'
 				/>
 			</ul>
 
-			<div v-else :class="cn('gap-8', 'flexCol flexCenter', 'font-heading text-lg')">
+			<div v-else :class="cn('gap-8', 'flexCol flexCenter', 'text-lg font-heading')">
 				<Icon
 					name="lucide:shopping-basket"
 					:class="
-						cn('h-20 w-20', 'p-4', 'rounded-full bg-mistyGreen/20', 'text-carbon/60')
+						cn('w-20 h-20', 'p-4', 'rounded-full bg-mistyGreen/20', 'text-carbon/60')
 					"
 				/>
 				<span>Your bag is empty !</span>

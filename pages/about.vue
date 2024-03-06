@@ -4,11 +4,11 @@
 	<div :class="cn('h-full w-full', 'gap-16', 'flexCol')">
 		<div :class="cn('relative', 'h-screen w-full', 'flexCol')">
 			<div
-				:class="cn('paddingX gap-16', 'h-full w-full', 'flexCol items-center justify-end')"
+				:class="cn('paddingX gap-16', 'w-full h-full', 'flexCol justify-end items-center')"
 			>
 				<h1 class="sticky -bottom-5">OUR WORLD</h1>
 
-				<div :class="cn('relative', 'h-4/6 w-full')">
+				<div :class="cn('relative', 'w-full h-4/6')">
 					<video
 						autoplay
 						loop
@@ -16,8 +16,8 @@
 						:class="
 							cn(
 								'absolute',
-								'h-full w-full',
-								'object-cover brightness-90 grayscale transition-all duration-300 hover:grayscale-0'
+								'w-full h-full',
+								'grayscale brightness-90 object-cover hover:grayscale-0 transition-all duration-300'
 							)
 						"
 					>
@@ -30,25 +30,25 @@
 			:class="
 				cn(
 					'section',
-					'gap-16 py-0 lg:gap-0 lg:py-16',
-					'lg:flexBetween flex flex-col-reverse lg:flex-row'
+					'py-0 lg:py-16 gap-16 lg:gap-0',
+					'flex flex-col-reverse lg:flex-row lg:flexBetween'
 				)
 			"
 		>
-			<div :class="cn('h-full w-full lg:w-4/12')">
+			<div :class="cn('w-full lg:w-4/12 h-full')">
 				<NuxtImg
 					src="/images/sasha_reed.jpg"
 					alt="Sasha Reed"
 					:class="
 						cn(
-							'h-full w-full',
+							'w-full h-full',
 							'object-cover grayscale',
-							'transition-all duration-300 hover:grayscale-0'
+							'hover:grayscale-0 transition-all duration-300'
 						)
 					"
 				/>
 			</div>
-			<div :class="cn('h-full w-full lg:w-7/12', 'gap-8 lg:gap-32', 'flexCol items-center')">
+			<div :class="cn('w-full lg:w-7/12 h-full', 'gap-8 lg:gap-32', 'flexCol items-center')">
 				<div :class="cn('gap-4', 'flexCol items-center')">
 					<h3>SASHA REED</h3>
 					<span class="txt-base text-mistyGreen">BASED IN AUSTRALIA</span>
@@ -56,7 +56,7 @@
 
 				<div
 					:class="
-						cn('gap-8 lg:gap-0', 'lg:flexBetween flex flex-col lg:flex-row', 'txt-sm')
+						cn('gap-8 lg:gap-0', 'flex flex-col lg:flex-row lg:flexBetween', 'txt-sm')
 					"
 				>
 					<p class="w-full lg:w-5/12">
@@ -85,12 +85,12 @@
 			:class="
 				cn(
 					'section',
-					'gap-16 py-0 lg:gap-0 lg:py-16',
-					'lg:flexBetween flex flex-col lg:flex-row'
+					'py-0 lg:py-16 gap-16 lg:gap-0',
+					'flex flex-col lg:flex-row lg:flexBetween'
 				)
 			"
 		>
-			<div :class="cn('h-full w-full lg:w-7/12', 'gap-8 lg:gap-32', 'flexCol items-center')">
+			<div :class="cn('w-full lg:w-7/12 h-full', 'gap-8 lg:gap-32', 'flexCol items-center')">
 				<div :class="cn('gap-4', 'flexCol items-center')">
 					<h3>SKYLAR BENETT</h3>
 					<span class="txt-base text-mistyGreen">BASED IN AUSTRALIA</span>
@@ -98,7 +98,7 @@
 
 				<div
 					:class="
-						cn('gap-4 lg:gap-0', 'lg:flexBetween flex flex-col lg:flex-row', 'txt-sm')
+						cn('gap-4 lg:gap-0', 'flex flex-col lg:flex-row lg:flexBetween', 'txt-sm')
 					"
 				>
 					<p class="w-full lg:w-5/12">
@@ -124,15 +124,15 @@
 					beauty, fragility, and our responsibility to preserve it.
 				</h5>
 			</div>
-			<div :class="cn('h-full w-full lg:w-4/12')">
+			<div :class="cn('w-full lg:w-4/12 h-full')">
 				<NuxtImg
 					src="/images/skylar_benett.jpg"
 					alt="Skylar Benett"
 					:class="
 						cn(
-							'h-full w-full',
+							'w-full h-full',
 							'object-cover grayscale',
-							'transition-all duration-300 hover:grayscale-0'
+							'hover:grayscale-0 transition-all duration-300'
 						)
 					"
 				/>
