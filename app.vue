@@ -4,7 +4,9 @@ import { Toaster } from './components/ui/toast'
 
 <template>
 	<DevOnly>
-		<NuxtPage />
-		<Toaster />
+		<NuxtLayout>
+			<NuxtPage />
+			<Toaster />
+		</NuxtLayout>
 	</DevOnly>
 </template>

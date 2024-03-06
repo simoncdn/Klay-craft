@@ -1,15 +1,4 @@
 <script setup lang="ts">
-import BasketPanel from '../Basket/BasketPanel.vue'
-import { Button } from '../ui/button'
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger
-} from '../ui/sheet'
-
 defineProps({
 	textColor: {
 		type: String,
@@ -37,12 +26,23 @@ const routes = [
 type Routes = (typeof routes)[number]['path']
 
 const router = useRouter()
-
+const activeColor = ref('var(--carbon)')
 const isSelected = (path: Routes) => router.currentRoute.value.path === path
+
+watchEffect(() => {
+	if (router.currentRoute.value.path === '/') {
+		activeColor.value = 'var(--beige)'
+	} else {
+		activeColor.value = 'var(--carbon)'
+	}
+})
 </script>
 
 <template>
-	<div :class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center', textColor)">
+	<div
+		:class="cn('z-20', 'top-0', 'paddingX py-2', 'flexBetween items-center')"
+		:style="{ color: activeColor }"
+	>
 		<div>
 			<NuxtLink to="/" :class="cn('hidden lg:flex')">
 				<h6>KC</h6>
@@ -98,14 +98,9 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 						<span
 							v-if="isSelected(route.path)"
 							:class="
-								cn(
-									'absolute -bottom-4',
-									'h-1.5 w-1.5',
-									'rounded-full',
-									backgroundColor,
-									'mx-auto'
-								)
+								cn('absolute -bottom-4', 'h-1.5 w-1.5', 'rounded-full', 'mx-auto')
 							"
+							:style="{ backgroundColor: activeColor }"
 						></span>
 					</li>
 				</ul>

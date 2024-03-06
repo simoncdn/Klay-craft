@@ -1,11 +1,7 @@
-<script setup lang="ts">
-import LayoutHeader from '../Layout/LayoutHeader.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<div :class="cn('h-screen w-full')">
-		<LayoutHeader />
-
 		<video
 			autoplay
 			loop
