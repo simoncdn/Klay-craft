@@ -2,10 +2,10 @@
 
 <template>
 	<div :class="cn('h-full w-full', 'paddingX gap-4', 'flexCol')">
-		<div :class="cn('w-full h-fit', 'py-2', 'flexBetween')">
+		<div :class="cn('h-fit w-full', 'py-2', 'flexBetween')">
 			<div :class="cn('gap-2', 'flexCenter', 'txt-sm')">
 				<span class="text-mistyGreen">FILTER</span>
-				<span class="bg-carbon w-[1px] h-4"></span>
+				<span class="h-4 w-[1px] bg-carbon"></span>
 				<span :class="cn('gap-2', 'flexCenter')"
 					>ARTIST
 					<Icon name="lucide:chevron-down" />
@@ -14,7 +14,7 @@
 			<div :class="cn('h-full w-fit', 'gap-8', 'flexBetween items-center')">
 				<div :class="cn('h-fit', 'gap-2', 'flexCenter', 'txt-sm')">
 					<span class="text-mistyGreen">SORT BY</span>
-					<span class="bg-carbon w-[1px] h-4"></span>
+					<span class="h-4 w-[1px] bg-carbon"></span>
 					<span :class="cn('gap-2', 'flexCenter')"
 						>DEFAULT
 						<Icon name="lucide:chevron-down" />
@@ -28,7 +28,7 @@
 				cn(
 					'h-fit',
 					'gap-x-4 gap-y-8',
-					'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fit'
+					'auto-rows-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
 				)
 			"
 		>
@@ -39,16 +39,16 @@
 			>
 				<NuxtLink
 					:to="`/products/${product.id}`"
-					:class="cn('relative group', 'w-full h-full')"
+					:class="cn('group relative', 'h-full w-full')"
 				>
 					<NuxtImg
 						:src="product.image"
 						:alt="product.name"
 						:class="
 							cn(
-								'w-full h-full',
+								'h-full w-full',
 								'object-cover',
-								'group-hover:brightness-75 transition-all duration-300'
+								'transition-all duration-300 group-hover:brightness-75'
 							)
 						"
 					/>
@@ -56,10 +56,10 @@
 						name="lucide:eye"
 						:class="
 							cn(
-								'absolute top-0 right-0 left-0 bottom-0 opacity-0',
+								'absolute bottom-0 left-0 right-0 top-0 opacity-0',
 								'm-auto',
 								'text-2xl text-beige',
-								'group-hover:opacity-100 transition-all duration-300'
+								'transition-all duration-300 group-hover:opacity-100'
 							)
 						"
 					/>

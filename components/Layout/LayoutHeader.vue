@@ -63,7 +63,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 								>
 									<NuxtLink
 										:to="route.path"
-										:class="cn('hover:opacity-70 transition-all duration-300')"
+										:class="cn('transition-all duration-300 hover:opacity-70')"
 									>
 										{{ route.name }}
 									</NuxtLink>
@@ -83,7 +83,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 						:key="route.path"
 						:class="
 							cn(
-								'cursor-pointer relative',
+								'relative cursor-pointer',
 								'gap-2',
 								'flexCol items-center',
 								'txt-sm uppercase'
@@ -92,7 +92,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 					>
 						<NuxtLink
 							:to="route.path"
-							class="hover:opacity-70 transition-all duration-300"
+							class="transition-all duration-300 hover:opacity-70"
 							>{{ route.name }}
 						</NuxtLink>
 						<span
@@ -100,7 +100,7 @@ const isSelected = (path: Routes) => router.currentRoute.value.path === path
 							:class="
 								cn(
 									'absolute -bottom-4',
-									'w-1.5 h-1.5',
+									'h-1.5 w-1.5',
 									'rounded-full',
 									backgroundColor,
 									'mx-auto'

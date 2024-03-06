@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div :class="cn('section', 'lg:py-16 gap-16 lg:gap-0', 'flexCol lg:flex-row lg:flexBetween')">
-		<div :class="cn('relative w-full lg:w-5/12 h-full', 'gap-16', 'flexCol justify-center')">
-			<h2 class="z-10 lg:whitespace-nowrap text-center lg:text-left">OUR WORLD</h2>
+	<div :class="cn('section', 'gap-16 lg:gap-0 lg:py-16', 'flexCol lg:flexBetween lg:flex-row')">
+		<div :class="cn('relative h-full w-full lg:w-5/12', 'gap-16', 'flexCol justify-center')">
+			<h2 class="z-10 text-center lg:whitespace-nowrap lg:text-left">OUR WORLD</h2>
 
 			<div :class="cn('gap-16', 'flexCol justify-center')">
 				<div :class="cn('w-full', 'gap-8', 'flexCol', 'txt-sm')">
@@ -31,20 +31,20 @@
 
 				<NuxtLink
 					to="/about"
-					:class="cn('w-fit', 'flexCol', 'hover:opacity-70 transition-all duration-300')"
+					:class="cn('w-fit', 'flexCol', 'transition-all duration-300 hover:opacity-70')"
 					>READ OUR STORY
 
-					<span :class="cn('w-full h-[1px]', 'bg-carbon')"></span>
+					<span :class="cn('h-[1px] w-full', 'bg-carbon')"></span>
 				</NuxtLink>
 			</div>
 		</div>
 
 		<div :class="cn('relative', 'w-full lg:w-6/12')">
-			<span :class="cn('absolute bottom-0 -left-2', 'h-2/6 w-[1px]', 'bg-carbon')"></span>
+			<span :class="cn('absolute -left-2 bottom-0', 'h-2/6 w-[1px]', 'bg-carbon')"></span>
 			<NuxtImg
 				src="/images/Sasha_Skylar.jpg"
 				alt="Sasha Reed and Skylar Benett"
-				:class="cn('w-full h-full', 'object-cover')"
+				:class="cn('h-full w-full', 'object-cover')"
 			/>
 			<span :class="cn('absolute -bottom-2 right-0', 'h-[1px] w-6/12', 'bg-carbon')"></span>
 		</div>

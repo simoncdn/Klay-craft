@@ -10,7 +10,7 @@ defineProps<{ product: Product }>()
 			<img
 				:src="product.image"
 				:alt="product.name"
-				:class="cn('w-full h-full', 'object-cover')"
+				:class="cn('h-full w-full', 'object-cover')"
 			/>
 		</div>
 
@@ -20,8 +20,8 @@ defineProps<{ product: Product }>()
 				<span class="txt-xs font-medium">{{ formatPrice(product.price) }}</span>
 			</div>
 
-			<div :class="cn('w-full h-fit', 'gap-6', 'flexBetween items-end')">
-				<div :class="cn('w-full h-full', 'border border-carbon', 'flexCenter')">
+			<div :class="cn('h-fit w-full', 'gap-6', 'flexBetween items-end')">
+				<div :class="cn('h-full w-full', 'border border-carbon', 'flexCenter')">
 					<Button
 						variant="darkGhost"
 						size="full"
@@ -34,7 +34,7 @@ defineProps<{ product: Product }>()
 					<span
 						:class="
 							cn(
-								'flex-1 h-full',
+								'h-full flex-1',
 								'border-x border-x-carbon',
 								'py-1',
 								'flexCenter',

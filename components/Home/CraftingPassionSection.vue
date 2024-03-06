@@ -6,11 +6,11 @@
 			cn(
 				'section',
 				'gap-16 lg:gap-0',
-				'flex flex-col-reverse lg:flex-row lg:flexBetween lg:items-center'
+				'lg:flexBetween flex flex-col-reverse lg:flex-row lg:items-center'
 			)
 		"
 	>
-		<div :class="cn('w-full lg:w-4/12 h-full', 'gap-8 lg:gap-16', 'flexCol justify-center')">
+		<div :class="cn('h-full w-full lg:w-4/12', 'gap-8 lg:gap-16', 'flexCol justify-center')">
 			<h4>Pottery is the quiet expression of the eternal time</h4>
 
 			<div :class="cn('gap-6', 'flexCol', 'txt-sm')">
@@ -30,13 +30,13 @@
 				</p>
 			</div>
 		</div>
-		<div :class="cn('relative', 'w-full lg:w-7/12 h-full lg:h-5/6', 'flexCenter')">
+		<div :class="cn('relative', 'h-full w-full lg:h-5/6 lg:w-7/12', 'flexCenter')">
 			<NuxtImg
 				src="/images/ceramic_art_2.jpg"
 				alt="pottery art"
-				:class="cn('w-full h-full', 'object-cover')"
+				:class="cn('h-full w-full', 'object-cover')"
 			/>
-			<span :class="cn('absolute right-0 -bottom-2', 'w-5/12 h-[1px]', 'bg-carbon')"></span>
+			<span :class="cn('absolute -bottom-2 right-0', 'h-[1px] w-5/12', 'bg-carbon')"></span>
 		</div>
 	</div>
 </template>

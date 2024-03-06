@@ -5,32 +5,32 @@
 		:class="
 			cn(
 				'section',
-				'py-0 lg:py-16 gap-16 lg:gap-0',
-				'flex flex-col-reverse lg:flex-row lg:flexBetween'
+				'gap-16 py-0 lg:gap-0 lg:py-16',
+				'lg:flexBetween flex flex-col-reverse lg:flex-row'
 			)
 		"
 	>
-		<div :class="cn('w-full lg:w-4/12 h-full')">
+		<div :class="cn('h-full w-full lg:w-4/12')">
 			<NuxtImg
 				src="/images/sasha_reed.jpg"
 				alt="Sasha Reed"
 				:class="
 					cn(
-						'w-full h-full',
+						'h-full w-full',
 						'object-cover grayscale',
-						'hover:grayscale-0 transition-all duration-300'
+						'transition-all duration-300 hover:grayscale-0'
 					)
 				"
 			/>
 		</div>
-		<div :class="cn('w-full lg:w-7/12 h-full', 'gap-8 lg:gap-32', 'flexCol items-center')">
+		<div :class="cn('h-full w-full lg:w-7/12', 'gap-8 lg:gap-32', 'flexCol items-center')">
 			<div :class="cn('gap-4', 'flexCol items-center')">
 				<h3>SASHA REED</h3>
 				<span class="txt-base text-mistyGreen">BASED IN AUSTRALIA</span>
 			</div>
 
 			<div
-				:class="cn('gap-8 lg:gap-0', 'flex flex-col lg:flex-row lg:flexBetween', 'txt-sm')"
+				:class="cn('gap-8 lg:gap-0', 'lg:flexBetween flex flex-col lg:flex-row', 'txt-sm')"
 			>
 				<p class="w-full lg:w-5/12">
 					Sasha fell in love with pottery during a trip to Asia, where she discovered the

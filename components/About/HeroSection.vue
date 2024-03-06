@@ -6,12 +6,12 @@
 
 		<div
 			:class="
-				cn('paddingX gap-16 mt-24', 'w-full h-full', 'flexCol justify-end items-center')
+				cn('paddingX mt-24 gap-16', 'h-full w-full', 'flexCol items-center justify-end')
 			"
 		>
 			<h1 class="sticky -bottom-5">OUR WORLD</h1>
 
-			<div :class="cn('relative', 'w-full h-4/6')">
+			<div :class="cn('relative', 'h-4/6 w-full')">
 				<video
 					autoplay
 					loop
@@ -19,8 +19,8 @@
 					:class="
 						cn(
 							'absolute',
-							'w-full h-full',
-							'grayscale brightness-90 object-cover hover:grayscale-0 transition-all duration-300'
+							'h-full w-full',
+							'object-cover brightness-90 grayscale transition-all duration-300 hover:grayscale-0'
 						)
 					"
 				>

@@ -18,8 +18,8 @@ const handleSuscribe = () => {
 		:class="
 			cn(
 				'section',
-				'lg:py-32 gap-16 lg:gap-0',
-				'flex flex-col-reverse lg:flex-row flexBetween'
+				'gap-16 lg:gap-0 lg:py-32',
+				'flexBetween flex flex-col-reverse lg:flex-row'
 			)
 		"
 	>
@@ -27,7 +27,7 @@ const handleSuscribe = () => {
 			<NuxtImg
 				src="/images/ceramics_workshop.jpg"
 				alt="workshop"
-				:class="cn('w-full h-5/6', 'object-cover')"
+				:class="cn('h-5/6 w-full', 'object-cover')"
 			/>
 		</div>
 		<div
@@ -36,11 +36,11 @@ const handleSuscribe = () => {
 					'relative',
 					'w-full lg:w-4/12',
 					'gap-16',
-					'flexCol justify-center items-center lg:items-end'
+					'flexCol items-center justify-center lg:items-end'
 				)
 			"
 		>
-			<h2 class="lg:whitespace-nowrap text-center">Workshop</h2>
+			<h2 class="text-center lg:whitespace-nowrap">Workshop</h2>
 
 			<div :class="cn('gap-8', 'flexCol', 'txt-sm')">
 				<p>
@@ -59,16 +59,16 @@ const handleSuscribe = () => {
 							variant="ghost"
 							size="icon"
 							shape="roundedNone"
-							class="group hover:bg-mistyGreen/20 transition-all duration-300"
+							class="group transition-all duration-300 hover:bg-mistyGreen/20"
 							@click="handleSuscribe"
 						>
 							<Icon
 								name="lucide:send"
-								class="group-hover:rotate-45 transition-all duration-300"
+								class="transition-all duration-300 group-hover:rotate-45"
 							/>
 						</Button>
 					</div>
-					<span :class="cn('w-full h-[1px]', 'bg-carbon')"></span>
+					<span :class="cn('h-[1px] w-full', 'bg-carbon')"></span>
 				</div>
 			</div>
 		</div>

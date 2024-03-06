@@ -19,7 +19,7 @@
 		@apply font-heading text-clamp leading-none;
 	}
 	h2 {
-		@apply font-heading text-6xl sm:text-8xl md:text-9xl 2xl:text-clamp leading-none;
+		@apply font-heading text-6xl leading-none sm:text-8xl md:text-9xl 2xl:text-clamp;
 	}
 
 	h3 {
@@ -47,7 +47,7 @@
 	}
 
 	.section {
-		@apply relative h-full lg:h-screen w-full paddingX bg-beige;
+		@apply paddingX relative h-full w-full bg-beige lg:h-screen;
 	}
 
 	.flexCol {
@@ -70,23 +70,23 @@
 		@apply px-4 md:px-8 xl:px-16;
 	}
 	.heading-5 {
-		@apply text-xl xl:text-2xl font-heading;
+		@apply font-heading text-xl xl:text-2xl;
 	}
 
 	.heading-6 {
-		@apply text-lg font-heading;
+		@apply font-heading text-lg;
 	}
 
 	.txt-base {
-		@apply text-base font-body;
+		@apply font-body text-base;
 	}
 
 	.txt-sm {
-		@apply text-sm 2xl:text-lg font-body;
+		@apply font-body text-sm 2xl:text-lg;
 	}
 
 	.txt-xs {
-		@apply text-xs font-body;
+		@apply font-body text-xs;
 	}
 
 	.scrollbar-none::-webkit-scrollbar {
