@@ -11,6 +11,7 @@ module.exports = {
 	extends: ['@nuxt/eslint-config', 'plugin:prettier/recommended', 'prettier'],
 	plugins: [],
 	rules: {
-		'prettier/prettier': 'Warn'
+		'prettier/prettier': 'Warn',
+		'no-used-vars': 'off'
 	}
 }

@@ -1,4 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const products = ref([])
+const client = useSupabaseClient()
+
+const getProducts = async () => {
+	const { data, error } = await client.from('products').select('*')
+	if (error) {
+		console.error(error)
+	} else {
+		products.value = data
+	}
+}
+
+onMounted(() => {
+	getProducts()
+})
+</script>
 
 <template>
 	<div :class="cn('h-full w-full', 'gap-16 lg:gap-32', 'flexCol')">
@@ -81,6 +97,7 @@
 						:class="cn('group relative', 'h-full w-full')"
 					>
 						<NuxtImg
+							v-if="product.image"
 							:src="product.image"
 							:alt="product.name"
 							:class="

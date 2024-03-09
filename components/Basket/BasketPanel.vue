@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger
-} from '../ui/sheet'
-import { products } from '~/utils/products'
 import { buttonVariants } from '../ui/button'
-import BasketPanelProduct from './BasketPanelProduct.vue'
+
+const basket = ref([])
+
+onMounted(() => {
+	const basketStringified = localStorage.getItem('basket')
+	if (basketStringified) {
+		basket.value = JSON.parse(basketStringified)
+	}
+})
 </script>
 
 <template>
@@ -29,11 +28,11 @@ import BasketPanelProduct from './BasketPanelProduct.vue'
 			</SheetHeader>
 
 			<ul
-				v-if="products.length > 0"
+				v-if="basket.length > 0"
 				:class="cn('overflow-auto', 'w-full flex-1', 'gap-6', 'flexCol')"
 			>
 				<BasketPanelProduct
-					v-for="product in products"
+					v-for="product in basket"
 					:key="product.id"
 					:product="product"
 				/>

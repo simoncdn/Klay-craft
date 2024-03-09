@@ -1,16 +1,50 @@
 <script setup lang="ts">
-import LayoutHeader from '~/components/Layout/LayoutHeader.vue'
+import { useToast } from '~/components/ui/toast'
 
 const router = useRoute()
-const productSlugId = router.params.productId
-const product = products.find((product) => product.id === Number(productSlugId))
+const client = useSupabaseClient()
+const { toast } = useToast()
+const product = ref()
+const productId = router.params.productId
+
+const getProduct = async () => {
+	const { data, error } = await client.from('products').select().eq('id', productId).single()
+	if (error) {
+		console.error(error)
+	} else {
+		product.value = data
+	}
+}
+const incrementQuantity = () => {
+	product.value.quantity++
+}
+const decrementQuantity = () => {
+	if (product.value.quantity > 0) {
+		product.value.quantity--
+	}
+}
+const resetQuantity = () => {
+	product.value.quantity = 0
+}
+const handleAddToCart = () => {
+	if (product.value.quantity === 0) return
+	const productStringified = JSON.stringify([product.value])
+	localStorage.setItem('basket', productStringified)
+	resetQuantity()
+	toast({
+		title: 'Added to cart',
+		description: `${product.value.name} has been added to your cart`
+	})
+}
+
+onMounted(() => {
+	getProduct()
+})
 </script>
 
 <template>
 	<div :class="cn('h-full w-full', 'flexCol')">
 		<div :class="cn('h-full w-full', ' gap-8 pb-16', 'flexCol')">
-			<LayoutHeader text-color="text-carbon" background-color="bg-carbon" />
-
 			<div :class="cn('h-full w-full', 'paddingX gap-8', 'flexCol')">
 				<NuxtLink
 					to="/products"
@@ -79,6 +113,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 								size="full"
 								shape="roundedNone"
 								:class="cn('w-2/12')"
+								@click="decrementQuantity"
 							>
 								-
 							</Button>
@@ -101,6 +136,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 								size="full"
 								shape="roundedNone"
 								:class="cn('w-2/12')"
+								@click="incrementQuantity"
 							>
 								+
 							</Button>
@@ -109,6 +145,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 								variant="darkGhost"
 								shape="roundedNone"
 								:class="cn('flex-1', 'border-l border-l-carbon')"
+								@click="handleAddToCart(product)"
 							>
 								Add to cart
 							</Button>
@@ -117,6 +154,7 @@ const product = products.find((product) => product.id === Number(productSlugId))
 
 					<div :class="cn('h-full flex-1')">
 						<NuxtImg
+							v-if="product?.image"
 							:src="product?.image"
 							:alt="product?.name"
 							:class="cn('h-full w-full', 'object-cover')"
