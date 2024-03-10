@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SignOut from '~/components/Auth/SignOut.vue'
+import SignUp from '~/components/Auth/SignUp.vue'
 import SignIn from '~/components/Auth/SignIn.vue'
 
 const currentForm = ref('signIn')
@@ -20,8 +20,8 @@ const handleForm = (formValue: string) => {
             </div>
 
             <div :class="cn('w-4/12', 'flexCenter')">
-                <SignIn v-if="currentForm === 'signIn'" @handleForm="handleForm" />
-                <SignOut v-else @handleForm="handleForm" />
+                <SignIn v-if="currentForm === 'signIn'" @handle-form="handleForm" />
+                <SignUp v-else @handle-form="handleForm" />
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { buttonVariants } from '~/components/ui/button'
+import { useToast } from '~/components/ui/toast'
 defineProps({
     textColor: {
         type: String,
@@ -27,9 +28,27 @@ const routes = [
 type Routes = (typeof routes)[number]['path']
 
 const router = useRouter()
+const { toast } = useToast()
 const activeColor = ref('var(--carbon)')
 const isSelected = (path: Routes) => router.currentRoute.value.path === path
+const user = useSupabaseUser()
+const supabase = useSupabaseClient()
 
+async function signOut() {
+    const { error } = await supabase.auth.signOut()
+    if (error) {
+        toast({
+            title: 'Error',
+            description: error.message,
+            variant: 'destructive'
+        })
+    } else {
+        toast({
+            title: 'Success',
+            description: 'You have been signed out', variant: 'default'
+        })
+    }
+}
 watchEffect(() => {
     if (router.currentRoute.value.path === '/') {
         activeColor.value = 'var(--beige)'
@@ -89,9 +108,20 @@ watchEffect(() => {
                 <!-- <Button shape="roundedNone" variant="ghost"> -->
                 <!-- 	<Icon name="lucide:heart" /> -->
                 <!-- </Button> -->
-                <NuxtLink to="/login" :class="cn(buttonVariants({ shape: 'roundedNone', variant: 'ghost' }))">
-                    <Icon name="lucide:user-2" />
-                </NuxtLink>
+                <DropdownMenu>
+                    <DropdownMenuTrigger :class="cn(buttonVariants({ shape: 'roundedNone', variant: 'ghost' }))">
+                        <Icon name="lucide:user-2" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem v-if="user" @click="signOut">Sign Out</DropdownMenuItem>
+                        <DropdownMenuItem v-else>
+                            <NuxtLink to="/login" :class="cn(buttonVariants({ shape: 'roundedNone', variant: 'ghost' }))
+        ">
+                                Sign In
+                            </NuxtLink>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
                 <BasketPanel />
             </div>
         </div>
