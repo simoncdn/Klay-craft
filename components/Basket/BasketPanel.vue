@@ -3,19 +3,19 @@ import { buttonVariants } from '../ui/button'
 import { useStorage } from '@vueuse/core'
 import { useBasketStore } from '~/store/useBasketStore'
 
-const basketSubtotal = ref(0);
+const isOpenSheet = ref(false)
 const { basket } = useBasketStore()
 
-watch(basket, () => {
-    basketSubtotal.value = getBasketSubtotal(basket)
-})
-onMounted(() => {
-    basketSubtotal.value = getBasketSubtotal(basket)
+const closeSheet = () => {
+    isOpenSheet.value = false
+}
+const basketSubtotal = computed(() => {
+    return getBasketSubtotal(basket)
 })
 </script>
 
 <template>
-    <Sheet>
+    <Sheet v-model:open="isOpenSheet">
         <SheetTrigger :class="cn(buttonVariants({ variant: 'ghost', shape: 'roundedNone' }))">
             <Icon name="lucide:shopping-basket" />
         </SheetTrigger>
@@ -36,7 +36,7 @@ onMounted(() => {
 
             <div v-else :class="cn('gap-8', 'flexCol flexCenter', 'font-heading text-lg')">
                 <Icon name="lucide:shopping-basket" :class="cn('h-20 w-20', 'p-4', 'rounded-full bg-mistyGreen/20', 'text-carbon/60')
-            " />
+        " />
                 <span>Your bag is empty !</span>
             </div>
 
@@ -45,7 +45,9 @@ onMounted(() => {
                     SUBTOTAL: <span class="font-semibold">{{ formatPrice(basketSubtotal) }}</span>
                 </div>
 
-                <Button shape="roundedNone" variant="solid" :class="cn('heading-6')">Checkout</Button>
+                <NuxtLink to="/checkout" @click="closeSheet"
+                    :class="cn(buttonVariants({ shape: 'roudedNone', variant: 'solid' }), 'heading-6')">Checkout
+                </NuxtLink>
             </SheetFooter>
         </SheetContent>
     </Sheet>
