@@ -10,7 +10,9 @@ export default defineNuxtConfig({
 		'nuxt-icon',
 		'shadcn-nuxt',
 		'@nuxt/image',
-		'@nuxtjs/supabase'
+		'@nuxtjs/supabase',
+		'@pinia/nuxt',
+		'@pinia-plugin-persistedstate/nuxt'
 	],
 	supabase: {
 		redirect: false

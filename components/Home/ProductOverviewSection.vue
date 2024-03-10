@@ -2,7 +2,7 @@
 import { products } from '#imports'
 import { useScroll } from '@vueuse/core'
 
-const productsList = ref<HTMLElement | null>(null)
+const productsList = ref<HTMLElement | null>()
 const { x } = useScroll(productsList)
 
 const translateX = computed(() => {

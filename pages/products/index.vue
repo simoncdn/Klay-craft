@@ -1,16 +1,11 @@
 <script setup lang="ts">
-const products = ref([])
+const products = ref<Product | []>([])
 const client = useSupabaseClient()
 
 const getProducts = async () => {
-	const { data, error } = await client.from('products').select('*')
-	if (error) {
-		console.error(error)
-	} else {
-		products.value = data
-	}
+	const { data } = await client.from('products').select('*')
+	products.value = data
 }
-
 onMounted(() => {
 	getProducts()
 })

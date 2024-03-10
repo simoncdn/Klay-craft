@@ -1,13 +1,13 @@
-export type Product = {
-	id: number
-	name: string
-	artist?: string
-	measurements?: string
-	description: string
-	price: number
-	image: string
-	quantity: number
-}
+// export type Product = {
+// 	id: number
+// 	name: string
+// 	artist?: string
+// 	measurements?: string
+// 	description: string
+// 	price: number
+// 	image: string
+// 	quantity: number
+// }
 
 export const products = []
 // export const products: Product[] = [
