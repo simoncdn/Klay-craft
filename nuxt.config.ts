@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	devServer: {
-		port: 3000
+		port: 3001
 	},
 	modules: [
 		'@nuxtjs/eslint-module',
