@@ -11,7 +11,7 @@ const handleForm = (formValue: string) => {
 
 <template>
 	<div :class="cn('h-full w-full', 'paddingX gap-16', 'flex')">
-		<div :class="cn('gap-16', 'flex justify-center')">
+		<div :class="cn('h-full w-full', 'gap-16', 'flex justify-center')">
 			<div class="w-4/12">
 				<Suspense>
 					<NuxtImg
@@ -19,6 +19,10 @@ const handleForm = (formValue: string) => {
 						alt="hero"
 						:class="cn('h-full w-full', 'object-cover grayscale')"
 					/>
+
+					<!-- <template #pending> -->
+					<!-- 	<div class="h-full w-full bg-gray-200" /> -->
+					<!-- </template> -->
 				</Suspense>
 			</div>
 

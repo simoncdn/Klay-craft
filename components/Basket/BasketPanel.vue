@@ -17,7 +17,7 @@ const basketSubtotal = computed(() => {
 <template>
 	<Sheet v-model:open="isOpenSheet">
 		<SheetTrigger :class="cn(buttonVariants({ variant: 'ghost', shape: 'roundedNone' }))">
-			<Icon name="lucide:shopping-basket" />
+			<Icon name="lucide:shopping-basket" class="text-xl" />
 		</SheetTrigger>
 		<SheetContent :class="cn('gap-8', 'flexBetween flexCol')">
 			<SheetHeader>

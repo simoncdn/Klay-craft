@@ -135,7 +135,7 @@ watchEffect(() => {
 					<DropdownMenuTrigger
 						:class="cn(buttonVariants({ shape: 'roundedNone', variant: 'ghost' }))"
 					>
-						<Icon name="lucide:user-2" />
+						<Icon name="lucide:user-2" class="text-xl" />
 					</DropdownMenuTrigger>
 					<DropdownMenuContent>
 						<DropdownMenuItem v-if="user" @click="signOut">Sign Out</DropdownMenuItem>
@@ -143,7 +143,13 @@ watchEffect(() => {
 							<NuxtLink
 								to="/login"
 								:class="
-									cn(buttonVariants({ shape: 'roundedNone', variant: 'ghost' }))
+									cn(
+										buttonVariants({
+											shape: 'roundedNone',
+											variant: 'ghost',
+											size: 'fit'
+										})
+									)
 								"
 							>
 								Sign In

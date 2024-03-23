@@ -115,7 +115,9 @@
 			</div>
 		</div>
 		<HomeWorkshopSection />
-		<ProductOverviewSection />
+
+		<HomeProductOverviewSection />
+
 		<div :class="cn('section', 'gap-16 lg:gap-0', 'lg:flexBetween flex flex-col lg:flex-row')">
 			<div :class="cn('relative', 'h-full w-full lg:w-5/12')">
 				<NuxtImg
